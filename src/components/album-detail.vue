@@ -73,6 +73,13 @@
                     </div>
                 </div>
             </div>
+            <!-- nav button for preview -->
+            <MyPagination
+                :cur="currentPage"
+                :max="pageChunks.length"
+                @change="handlePageChange"
+            >
+            </MyPagination>
         </div>
     </main>
 </template>

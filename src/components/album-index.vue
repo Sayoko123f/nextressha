@@ -7,12 +7,16 @@
                 :key="key"
             >
                 <div class="flex h-80 w-56 items-center justify-center">
-                    <img
-                        class="max-h-full max-w-full rounded"
-                        :src="`${serverImgBaseURL}/${item.key}/${item.cover}`"
-                        alt=""
-                        loading="lazy"
-                    />
+                    <router-link
+                        :to="{ name: 'album-detail', params: { id: key } }"
+                        :title="item.title"
+                    >
+                        <img
+                            class="max-h-full max-w-full rounded"
+                            :src="`${serverImgBaseURL}/${item.key}/${item.cover}`"
+                            alt=""
+                            loading="lazy"
+                    /></router-link>
                 </div>
                 <router-link
                     class="max-w-full line-clamp-2 hover:text-sky-300/90 hover:underline"
